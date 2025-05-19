@@ -12,7 +12,6 @@ const sectionObserver = new IntersectionObserver((entries) => {
 sections.forEach(section => {
     sectionObserver.observe(section);
 });
-
 // Mobile menu toggle
 document.addEventListener('DOMContentLoaded', () => {
     // Form submission handling
