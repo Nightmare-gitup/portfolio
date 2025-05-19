@@ -1,23 +1,69 @@
-/* Smooth scrolling behavior */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-html {
     scroll-behavior: smooth;
+    font-family: "Jost", sans-serif;
+    list-style: none;
+    text-decoration: none;
 }
-
-/* Fade in animation for sections */
-section {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+}
+.logo img{
+    max-width: 120px;
+    height: auto;
+}
+.navmenu{
+    display: flex;
+}
+.navmenu a{
+    color: #2c2c2c;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    font-weight: 400;
+    transition: all .42s ease;
+}
+.navmenu :hover{
+    color: #EE1C47;
+}
+.nav-icon{
+    display: flex;
+    align-items: center;
+}
+.nav-icon i{
+    margin-right: 20px;
+    color: #2c2c2c;
+    font-size: 25px;
+    font-weight: 400;
+    transition: all .42s ease;
+}
+.nav-icon i:hover{
+    transform: scale(1.1);
+    color: #EE1C47;
+}
+#menu-icon{
+    font-size: 35px;
+    color: #2c2c2c;
+    z-index: 10001;
+    cursor: pointer;
+}
+section{
+    padding: 5% 10%;
 }
 .main-home{
     width: 100%;
     height: 100vh;
-    background-image: url(imagekaelis/logokaelis.png);
+    background-image: url(imagekaelis/OZZX6645.PNG);
     background-position: center;
     background-size: cover;
     display: grid;
@@ -31,7 +77,7 @@ section {
     font-weight: 500;
 }
 .main-text h1{
-    color: black ;
+    color: #000;
     font-size: 65px;
     text-transform: capitalize;
     line-height: 1.1;
@@ -39,18 +85,18 @@ section {
     margin: 6px 0 10px;
 }
 .main-text p{
-    color: black;
+    color: #0b0c0c;
     font-size: 20px;
     font-style: italic;
     margin-bottom: 20px;
 }
 .main-btn{
     display: inline-block;
-    color: black;
+    color: #111;
     font-size: 16x;
     font-weight: 500;
     text-transform: capitalize;
-    border: 2px solid black;
+    border: 2px solid #111;
     padding: 12px 25px ;
     transition: all .42s ease;
 }
@@ -78,50 +124,76 @@ section {
     color: #fff;
     transition: all .42 ease;
 }
-.first{
-    color: black;
+header.sticky{
+    background: #fff;
+    padding: 20px 10%;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+}
+.center-text h2{
+    color: #111;
+    font-size: 28px;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.center-text span{
+    color: #EE1C47;
+}
+.products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+    gap: 2rem;
+}
+.row{
+    position: relative;
+    transition: all .40s;
+}
+.row img{
+    width: 100%;
+    height: 300px;
+    transition: all .40s;
+}
+.row img:hover{
+    transform: scale(0.9);
+}
+.products-text h5{
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: #27b737;
+    padding: 3px 10px;
+    border-radius: 2px;
+}
+.heart-icon{
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+}
+.heart-icon :hover{
+    color: #EE1C47;
+}
+.ratting i{
+    color: #FF8C00;
+    font-size: 18px;
+}
+.price h4{
+    color: #111;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.price p{
+    color: #151515;
+    font-size: 14px;
+    font-weight: 600;
 }
 .rone{
-    height: 800px;
-    width: 300px;
+    width: 100px;
     height: auto;
     border-radius: 50px;
-    margin: 10px 0;  
-} 
-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Hover effects for navigation links */
-nav a {
-    position: relative;
-}
-
-nav a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: #3B82F6;
-    transition: width 0.3s ease-in-out;
-}
-
-nav a:hover::after {
-    width: 100%;
-}
-/* Custom styles for form inputs */
-input:focus, textarea:focus {
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
-}
-
-/* Skill circle animation on hover */
-.skills-circle {
-    transition: transform 0.3s ease-in-out;
-}
-
-.skills-circle:hover {
-    transform: scale(1.1);
+    margin: 10px 0;
 }
